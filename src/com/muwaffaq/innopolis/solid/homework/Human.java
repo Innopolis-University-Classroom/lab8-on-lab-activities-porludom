@@ -12,12 +12,14 @@ public class Human implements Needs {
     private double salary;
     private List<String> hobbies;
 
-    enum Languages {Arabic, English, Japanese}
+    enum Languages {
+        Arabic, English, Japanese
+            String helloword;
+        
+        }
 
     String sayHello(Languages languages) {
-        if (languages == Languages.Arabic)
-            return "مرحبا";
-        return "Hello";
+        return languages.helloword;;
     }
 
     void calculateTax(int percentage) {
