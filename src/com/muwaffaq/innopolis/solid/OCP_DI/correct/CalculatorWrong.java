@@ -1,4 +1,4 @@
-package com.muwaffaq.innopolis.solid.OCP_DI.wrong;
+package com.muwaffaq.innopolis.solid.OCP_DI.correct;
 
 //❌❌❌❌
 // how many SOLID Principle does it violate ?
