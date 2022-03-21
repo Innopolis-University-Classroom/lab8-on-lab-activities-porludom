@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * ❌ ❌ ❌ ❌
- * how many responsibilities does it have?
+ * how many responsibilities does it have? 3
  *
  * SRP :
  * a class should only have one responsibility
@@ -25,12 +25,21 @@ public class Cart {
     void removeFromCart(Product product) {
         products.remove(product);
     }
+}
 
-    void applyDiscount(int percentage) {
-        totals = totals * percentage;
+public class ProductManager{
+    public void addToCart(Cart cart, Product product){
+        cart.products.add(product);
     }
+    public void removeFromCart(Cart cart, Product product){
+        cart.products.remove(product);
+    }
+}
 
-
+public class DiscountManager{
+    public void applyDiscount(Cart cart, int per){
+        cart.totals = totals * per;
+    }
 }
 
 
