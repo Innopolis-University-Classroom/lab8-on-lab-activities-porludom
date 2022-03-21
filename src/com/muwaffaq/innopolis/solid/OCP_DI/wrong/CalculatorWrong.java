@@ -13,7 +13,30 @@ package com.muwaffaq.innopolis.solid.OCP_DI.wrong;
     private double left;
     private double right;
 
-    public enum Operation {ADD, SUBTRACT, DIVIDE,MULTIPLICATION}
+    public enum Operation {
+        ADD{
+            @java.lang.Override
+            double operation(double left, double right) {
+                return left+right;
+            }
+        }, SUBTRACT {
+            @Override
+            double operation(double left, double right) {
+                return left-right;
+            }
+        }, DIVIDE {
+            @Override
+            double operation(double left, double right) {
+                return left*right;
+            }
+        }, MULTIPLICATION {
+            @Override
+            double operation(double left, double right) {
+                return left/right;
+            }
+        };
+        abstract double operation(double left, double right);
+    }
 
     /// ❌ ❌ ❌ ❌
     /// this function violates the OP principle
